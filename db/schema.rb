@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_13_070553) do
+ActiveRecord::Schema.define(version: 2022_08_13_070841) do
 
   create_table "cpus", force: :cascade do |t|
     t.string "name"
@@ -66,6 +66,15 @@ ActiveRecord::Schema.define(version: 2022_08_13_070553) do
     t.index ["storage_id"], name: "index_pcs_on_storage_id"
     t.index ["system_id"], name: "index_pcs_on_system_id"
     t.index ["videocard_id"], name: "index_pcs_on_videocard_id"
+  end
+
+  create_table "videocards", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.integer "pc_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["pc_id"], name: "index_videocards_on_pc_id"
   end
 
   add_foreign_key "pcs", "cases"
