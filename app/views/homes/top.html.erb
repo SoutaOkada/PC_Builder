@@ -1,13 +1,112 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-6">
+    <div class="col-12">
       <div>
-        <h2>パーツ</h2>
-      </div>
-    </div>
+        <div class="row">
+          <table class="table table-responsive-sm table-sm table-hover">
+            <tr>
+              <th></th>
+              <th>モデル</th>
+              <th>価格</th>
+            </tr>
+            <tr>
+              <td>CPU</td>
+              <%= form_with model: @cpu, url: root_path do |f| %>
+                <td><%= f.text_area :name, class: "form-control" %></td>
+                <td><%= f.number_field :price, class: "form-control" %></td>
+              <% end %>
+            </tr>
 
-    <div class="col-6">
-      <h2>合計</h2>
+            <tr>
+              <td>CPUクーラー</td>
+              <%= form_with model: @cpu_cooler, url: root_path do |f| %>
+                <td><%= f.text_area :name, class: "form-control" %></td>
+                <td><%= f.number_field :price, class: "form-control" %></td>
+              <% end %>
+            </tr>
+
+            <tr>
+              <td>マザーボード</td>
+              <%= form_with model: @motherboard, url: root_path do |f| %>
+                <td><%= f.text_area :name, class: "form-control" %></td>
+                <td><%= f.number_field :price, class: "form-control" %></td>
+              <% end %>
+            </tr>
+
+            <tr>
+              <td>メモリー</td>
+              <%= form_with model: @memory, url: root_path do |f| %>
+                <td><%= f.text_area :name, class: "form-control" %></td>
+                <td><%= f.number_field :price, class: "form-control" %></td>
+              <% end %>
+            </tr>
+
+            <tr>
+              <td>ストレージ</td>
+              <%= form_with model: @storage, url: root_path do |f| %>
+                <td><%= f.text_area :name, class: "form-control" %></td>
+                <td><%= f.number_field :price, class: "form-control" %></td>
+              <% end %>
+            </tr>
+
+            <tr>
+              <td>ドライブ</td>
+              <%= form_with model: @drive, url: root_path do |f| %>
+                <td><%= f.text_area :name, class: "form-control" %></td>
+                <td><%= f.number_field :price, class: "form-control" %></td>
+              <% end %>
+            </tr>
+
+            <tr>
+              <td>ビデオカード</td>
+              <%= form_with model: @videocard, url: root_path do |f| %>
+                <td><%= f.text_area :name, class: "form-control" %></td>
+                <td><%= f.number_field :price, class: "form-control" %></td>
+              <% end %>
+            </tr>
+
+            <tr>
+              <td>電源ユニット</td>
+              <%= form_with model: @power, url: root_path do |f| %>
+                <td><%= f.text_area :name, class: "form-control" %></td>
+                <td><%= f.number_field :price, class: "form-control" %></td>
+              <% end %>
+            </tr>
+
+            <tr>
+              <td>ケース</td>
+              <%= form_with model: @case, url: root_path do |f| %>
+                <td><%= f.text_area :name, class: "form-control" %></td>
+                <td><%= f.number_field :price, class: "form-control" %></td>
+              <% end %>
+            </tr>
+
+            <tr>
+              <td>冷却ファン</td>
+              <%= form_with model: @fan, url: root_path do |f| %>
+                <td><%= f.text_area :name, class: "form-control" %></td>
+                <td><%= f.number_field :price, class: "form-control" %></td>
+              <% end %>
+            </tr>
+
+            <tr>
+              <td>OS</td>
+              <%= form_with model: @system, url: root_path do |f| %>
+                <td><%= f.text_area :name, class: "form-control" %></td>
+                <td><%= f.number_field :price, class: "form-control" %></td>
+              <% end %>
+            </tr>
+
+            <tr>
+              <td>その他</td>
+              <%= form_with model: @other, url: root_path do |f| %>
+                <td><%= f.text_area :name, class: "form-control" %></td>
+                <td><%= f.number_field :price, class: "form-control" %></td>
+              <% end %>
+            </tr>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>
